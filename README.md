@@ -15,7 +15,7 @@ Go to the project directory
   cd my-project
 ```
 
-Open [index.html](https://github.com/SyedAli310/pop-game/blob/main/index.html) in yur browser of choice
+Open [index.html](https://github.com/SyedAli310/pop-game/blob/main/index.html) in your browser of choice
 
 ## Deployed Link
 

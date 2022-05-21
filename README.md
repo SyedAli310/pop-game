@@ -1,4 +1,4 @@
-# pop-game
+# Pop Game
 A simple popping game made with JavaScript
 
 ## Run Locally

@@ -282,7 +282,7 @@ function stopGame(){
             .html(`
             <img class='rounded p-2' src='./img/notbad.gif' />
             <br>
-            <span class='h4 text-dark'>Not bad, Keep popping those pops.</span>`)
+            <span class='h4 text-light'>Not bad, Keep popping those pops.</span>`)
         }
     }, 1500);
 

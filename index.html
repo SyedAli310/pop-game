@@ -50,6 +50,7 @@
           style="font-family: 'Palette Mosaic', cursive"
         >
           Pop-Game
+          <span class="badge badge-secondary badge-sm text-info">dev</span>
         </h1></a
       >
     </div>
@@ -60,16 +61,7 @@
     >
       <div class="w-100 main-game-container text-center">
         <div
-          class="
-            select-div
-            text-center text-light
-            mt-4
-            py-2
-            bg-dark
-            rounded
-            d-flex
-            justify-content-around
-          "
+          class="select-div text-center text-light mt-4 py-2 bg-dark rounded d-flex justify-content-around"
         >
           <div class="difficulty-select-div">
             <span class="h3">Select Level</span>
@@ -151,29 +143,20 @@
         <div class="play-area-container">
           <div class="live-score badge badge-dark">
             <div
-              class="
-                w-100
-                d-flex
-                justify-content-between
-                align-items-center
-                p-2
-                px-4
-              "
+              class="w-100 d-flex justify-content-between align-items-center p-2 px-4"
             >
               <span class="h3">
-                  <span>Score:&nbsp;<span class="text-success" id="curr-score">0</span></span>
+                <span
+                  >Score:&nbsp;<span class="text-success" id="curr-score"
+                    >0</span
+                  ></span
+                >
               </span>
 
               <!-- <div  id="difficulty"></div> -->
 
               <span
-                class="
-                  text-center
-                  badge badge-pill badge-success
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                "
+                class="text-center badge badge-pill badge-success d-flex align-items-center justify-content-center"
                 id="time-left"
                 style="font-size: 24px"
               >
@@ -211,8 +194,10 @@
           <div class="rounded bg-dark my-2" id="play-area">
             <span class="info-msg h3 text-secondary">
               <i class="fas fa-dice-d6 text-secondary" id="dice-loader"></i>
-              <br/><br/>
-              Press <span class="badge badge-secondary text-white">Play</span> to start.
+              <br /><br />
+              Press
+              <span class="badge badge-secondary text-white">Play</span> to
+              start.
             </span>
           </div>
 
@@ -232,18 +217,7 @@
       </div>
 
       <div
-        class="
-          w-100
-          rounded
-          bg-dark
-          text-light
-          mt-2
-          p-3
-          d-flex
-          flex-column
-          align-items-center
-          justify-content-center
-        "
+        class="w-100 rounded bg-dark text-light mt-2 p-3 d-flex flex-column align-items-center justify-content-center"
         id="score"
       >
         <div class="w-100 text-success text-center mt-2">
@@ -269,18 +243,13 @@
       </div>
     </main>
 
-    <div class="rounded bg-dark text-center text-secondary p-2 d-flex justify-content-around align-items-center">
-      <img src="./img/title.png" style="height: 20px; width: 20px;">
-      Footer 
-      <img src="./img/title.png" style="height: 20px; width: 20px;">
+    <div
+      class="rounded bg-dark text-center text-secondary p-2 d-flex justify-content-around align-items-center"
+    >
+      <img src="./img/title.png" style="height: 20px; width: 20px" />
+      Footer
+      <img src="./img/title.png" style="height: 20px; width: 20px" />
     </div>
-
-
-
-
-
-
-
 
     <!-- Non-visible content -->
 
@@ -309,7 +278,10 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title text-success"><i class="fas fa-medal"></i>&nbsp;Your score <span class="h5 text-secondary" id="modal-last-time"></span></h4>
+            <h4 class="modal-title text-success">
+              <i class="fas fa-medal"></i>&nbsp;Your score
+              <span class="h5 text-secondary" id="modal-last-time"></span>
+            </h4>
             <button type="button" class="close" data-dismiss="modal">
               <i class="fas fa-times"></i>
             </button>

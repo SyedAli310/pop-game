@@ -34,24 +34,10 @@
       <div class="w-50 rounded my-auto p-4 text-center internet-status"></div>
     </div>
 
-    <div class="rounded bg-dark text-secondary text-center p-2" id="header">
-      <lord-icon
-        src="https://cdn.lordicon.com/pndvzexs.json"
-        trigger="loop-on-hover"
-        colors="primary:#848484,secondary:#28A745"
-        stroke="30"
-        style="width: 150px; height: 150px"
-      >
-      </lord-icon>
-      <br />
-      <a href="./index.html" class="btn"
-        ><h1
-          class="py-2 text-success"
-          style="font-family: 'Palette Mosaic', cursive"
-        >
-          Pop-Game
-        </h1></a
-      >
+    <div class="rounded bg-dark text-center px-2  border-bottom border-dark" id="header">
+      <a href="./index.html" class="btn">
+        <h1 class="py-2 text-success" style="font-family: 'Palette Mosaic', cursive">Pop-Game</h1>
+      </a>
     </div>
 
     <main
@@ -60,16 +46,7 @@
     >
       <div class="w-100 main-game-container text-center">
         <div
-          class="
-            select-div
-            text-center text-light
-            mt-4
-            py-2
-            bg-dark
-            rounded
-            d-flex
-            justify-content-around
-          "
+          class="select-div text-center text-light mt-2 py-2 bg-dark rounded d-flex justify-content-around"
         >
           <div class="difficulty-select-div">
             <span class="h3">Select Level</span>
@@ -151,29 +128,20 @@
         <div class="play-area-container">
           <div class="live-score badge badge-dark">
             <div
-              class="
-                w-100
-                d-flex
-                justify-content-between
-                align-items-center
-                p-2
-                px-4
-              "
+              class="w-100 d-flex justify-content-between align-items-center p-2 px-4 "
             >
               <span class="h3">
-                  <span>Score:&nbsp;<span class="text-success" id="curr-score">0</span></span>
+                <span
+                  >Score:&nbsp;<span class="text-success" id="curr-score"
+                    >0</span
+                  ></span
+                >
               </span>
 
               <!-- <div  id="difficulty"></div> -->
 
               <span
-                class="
-                  text-center
-                  badge badge-pill badge-success
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                "
+                class="text-center badge badge-pill badge-success d-flex align-items-center justify-content-center"
                 id="time-left"
                 style="font-size: 24px"
               >
@@ -208,17 +176,17 @@
             </div>
           </div>
 
-          <div class="rounded bg-dark my-2" id="play-area">
+          <div class="rounded bg-dark my-2 border border-success" id="play-area">
             <span class="info-msg h3 text-secondary">
               <i class="fas fa-dice-d6 text-secondary" id="dice-loader"></i>
-              <br/><br/>
-              Press <span class="badge badge-secondary text-white">Play</span> to start.
+              <br /><br />
+              Press Play to start.
             </span>
           </div>
 
           <div id="buttons-container">
             <button class="btn btn-success px-4" id="start">
-              <i class="fas fa-play"></i>&nbsp;Play
+              <i class="fas fa-play-circle"></i>&nbsp;Play
             </button>
             <button class="btn btn-danger px-4" id="stop">
               <i
@@ -232,70 +200,39 @@
       </div>
 
       <div
-        class="
-          w-100
-          rounded
-          bg-dark
-          text-light
-          mt-2
-          p-3
-          d-flex
-          flex-column
-          align-items-center
-          justify-content-center
-        "
+        class="w-100 rounded bg-dark text-light mt-2 p-3 d-flex flex-column align-items-center justify-content-center"
         id="score"
       >
-        <div class="w-100 text-success text-center mt-2">
+        <div class="w-100 text-success text-center mt-2 border border-dark rounded">
           <i
-            class="fas fa-flag-checkered fa-lg"
-            style="transform: rotate(-10deg) rotateY(180deg)"
-          ></i
-          >&nbsp;<span>Scores</span>
-          <hr class="rounded bg-secondary" />
-        </div>
-        <div class="w-100 my-2">
-          <div class="w-100 d-flex align-items-center justify-content-around">
-            <!-- <div>Score: <span class="text-success" id="curr-score">0</span></div> -->
-            <div>
-              Last Score: <span class="text-success" id="last-score">0</span>
-            </div>
-          </div>
-          <div class="text-center text-dark bg-secondary rounded p-2">
-            <span class="h4 text-light"> Recent Scores </span>
-            <div class="text-center mt-2 row" id="prev-scores">0</div>
+            class="fas fa-flag-checkered fa-lg mr-1 mt-3"
+            style="transform: rotate(-10deg) rotateY(180deg)">
+          </i>
+          <span>Scores</span>
+          <span class="text-muted badge badge-dark py-2">Last Score: <span class="text-success" id="last-score">0</span></span>
+          <hr class="bg-secondary">
+          <div class=" d-flex align-items-center justify-content-center text-dark bg-dark py-2" style="gap: 12px;">
+            <h4 class=" m-0 text-light"> Recent Scores </h4>
+            <div class="text-center row" id="prev-scores">0</div>
           </div>
         </div>
       </div>
     </main>
-
-    <div class="rounded bg-dark text-center text-secondary p-2 d-flex justify-content-around align-items-center">
-      <img src="./img/title.png" style="height: 20px; width: 20px;">
-      Footer 
-      <img src="./img/title.png" style="height: 20px; width: 20px;">
-    </div>
-
-
-
-
-
-
-
 
     <!-- Non-visible content -->
 
     <div class="modal fade" id="errModal" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content bg-dark border border-danger">
           <div class="modal-header">
-            <h4 class="modal-title text-danger">Error</h4>
+            <h4 class="modal-title text-danger">oops!</h4>
             <button type="button" class="close" data-dismiss="modal">
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times text-danger"></i>
             </button>
           </div>
           <div class="modal-body">
-            <p>Please select level and time.</p>
+            <h4 class="text-light">Please select level and time.</h4>
           </div>
           <!-- <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -307,9 +244,12 @@
     <div class="modal fade" id="scoreModal" role="dialog">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content  bg-dark border border-success text-white">
           <div class="modal-header">
-            <h4 class="modal-title text-success"><i class="fas fa-medal"></i>&nbsp;Your score <span class="h5 text-secondary" id="modal-last-time"></span></h4>
+            <h4 class="modal-title text-success">
+              <i class="fas fa-medal"></i>&nbsp;Your score
+              <span class="h5 text-secondary" id="modal-last-time"></span>
+            </h4>
             <button type="button" class="close" data-dismiss="modal">
               <i class="fas fa-times"></i>
             </button>
@@ -331,7 +271,7 @@
             </div>
 
             <hr class="mx-2 bg-secondary rounded" />
-            <div class="text-center" id="performance-msg"></div>
+            <div class="text-center text-light" id="performance-msg"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal">

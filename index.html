@@ -49,40 +49,31 @@
           class="select-div text-center text-light mt-2 py-2 bg-dark rounded d-flex justify-content-around"
         >
           <div class="difficulty-select-div">
-            <span class="h3">Select Level</span>
-            <br /><br />
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD1"
-                value="1500"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD1">Easy</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD2"
-                value="1000"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD2">Normal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD3"
-                value="700"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD3">Hard</label>
+            <span class="h3">Select Difficulty</span>
+            <!-- difficulty dropdown -->
+            <div class="dropdown w-auto mt-2">
+              <span class="h4" id="dyn-difficulty"></span>
+              <button
+                class="d-inline-flex align-items-center btn btn-dark border border-white dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="m-0 px-1"> change</span>
+              </button>
+              <ul class="dropdown-menu mt-2 py-0 w-100 bg-dark border border-primary text-light" aria-labelledby="dropdownMenuButton">
+                <li class="dropdown-item text-success difficulty-item" data-value="1500" data-name="easy" selected onclick="setDifficulty(this.dataset.value)">
+                  <h5 class="m-0">Easy</h5>
+                </li>
+                <li class="dropdown-item text-warning difficulty-item" data-value="1000" data-name="medium" onclick="setDifficulty(this.dataset.value)">
+                  <h5 class="m-0">Medium</h5>
+                </li>
+                <li class="dropdown-item text-danger difficulty-item" data-value="700" data-name="hard" onclick="setDifficulty(this.dataset.value)">
+                  <h5 class="m-0">Hard</h5>
+                </li>
+              </ul>
             </div>
           </div>
 

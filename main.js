@@ -54,10 +54,10 @@ if( localStorage.getItem('prevScores') !== null){
 
 
 
+var duration = '1500';
 
-var duration='unset';
+var difficulty = 'easy';
 
-var difficulty;
 
 var roundTime='unset'
 
@@ -86,19 +86,37 @@ function closeFullscreen() {
     }
 }
 
+function setDifficultySpan(difficulty){
+    if(difficulty=='easy'){
+        $('#dyn-difficulty').html('<span class="badge badge-success">Easy</span>');
+    }
+    if(difficulty=='medium'){
+        $('#dyn-difficulty').html('<span class="badge badge-warning">Medium</span>');
+    }
+    if(difficulty=='hard'){
+        $('#dyn-difficulty').html('<span class="badge badge-danger">Hard</span>');
+    }
+}
 
-function setDifficulty(){
-    duration = $('input[name="inlineRadioOptions"]:checked').val();
+setDifficultySpan(difficulty);
+
+function setDifficulty(value){
     console.log(duration);
+    duration = value;
 
-    if(duration=='1500'){
+    // add data-selected to the selected dropdown item
+
+    if(value=='1500'){
         difficulty = 'easy';
+        setDifficultySpan(difficulty);
     }
-    if(duration=='1000'){
-        difficulty = 'normal';
+    if(value=='1000'){
+        difficulty = 'medium';
+        setDifficultySpan(difficulty);
     }
-    if(duration=='700'){
+    if(value=='700'){
         difficulty = 'hard';
+        setDifficultySpan(difficulty);
     }
 }
 

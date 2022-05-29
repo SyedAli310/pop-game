@@ -154,13 +154,19 @@ function setDifficulty(value) {
 
 function setTimeSpan(duration) {
   if (duration == "1") {
-    $("#dyn-time").html('<span class="badge badge-danger">1 min</span>');
+    $("#dyn-time").html(
+      '<span class="badge badge-danger"> <i class="fas fa-clock"></i> 1 min</span>'
+    );
   }
   if (duration == "2") {
-    $("#dyn-time").html('<span class="badge badge-warning">2 min</span>');
+    $("#dyn-time").html(
+      '<span class="badge badge-warning"><i class="fas fa-clock"></i> 2 min</span>'
+    );
   }
   if (duration == "3") {
-    $("#dyn-time").html('<span class="badge badge-success">3 min</span>');
+    $("#dyn-time").html(
+      '<span class="badge badge-success"> <i class="fas fa-clock"></i> 3 min</span>'
+    );
   }
 }
 

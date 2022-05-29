@@ -60,7 +60,6 @@
             <span class="h3">Select Difficulty</span>
             <!-- difficulty dropdown -->
             <div class="dropdown w-auto mt-2">
-              <span class="h4" id="dyn-difficulty"></span>
               <button
                 class="d-inline-flex align-items-center btn btn-dark border border-white dropdown-toggle"
                 type="button"
@@ -69,7 +68,13 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <span class="m-0 px-1"> change</span>
+                <div
+                  class="m-0 d-flex align-items-center justify-content-center"
+                  style="gap: 0.25rem; font-size: larger"
+                >
+                  <i class="fas fa-new"></i>
+                  <span id="dyn-difficulty"></span>
+                </div>
               </button>
               <ul
                 class="dropdown-menu mt-2 py-0 w-100 bg-dark border border-primary text-light"
@@ -109,7 +114,7 @@
             <!-- time dropdown -->
             <div class="dropdown w-auto mt-2">
               <button
-                class="d-inline-flex align-items-center btn btn-dark border border-white"
+                class="d-inline-flex align-items-center btn btn-dark border border-white dropdown-toggle"
                 type="button"
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
@@ -118,9 +123,8 @@
               >
                 <div
                   class="m-0 d-flex align-items-center justify-content-center"
-                  style="gap: 0.25rem"
+                  style="gap: 0.25rem; font-size: larger"
                 >
-                  <i class="fas fa-clock"></i>
                   <span id="dyn-time"></span>
                 </div>
               </button>

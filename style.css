@@ -17,6 +17,23 @@ body {
   background-color: #1b1b1b !important;
 }
 
+.dropdown-item{
+  border-bottom: 1px solid white;
+  padding-block: 0.5rem;
+}
+
+.dropdown-item:last-child{
+  border-bottom: none;
+}
+
+.dropdown-item:hover{
+  background-color: rgba(50, 50, 50, 0.5) !important;
+}
+.dropdown-item:hover > a{
+  color: white !important;
+
+}
+
 input[type="radio"]:after {
   width: 15px;
   height: 15px;

@@ -34,9 +34,17 @@
       <div class="w-50 rounded my-auto p-4 text-center internet-status"></div>
     </div>
 
-    <div class="rounded bg-dark text-center px-2  border-bottom border-dark" id="header">
+    <div
+      class="rounded bg-dark text-center px-2 border-bottom border-dark"
+      id="header"
+    >
       <a href="./index.html" class="btn">
-        <h1 class="py-2 text-success" style="font-family: 'Palette Mosaic', cursive">Pop-Game</h1>
+        <h1
+          class="py-2 text-success"
+          style="font-family: 'Palette Mosaic', cursive"
+        >
+          Pop-Game
+        </h1>
       </a>
     </div>
 
@@ -49,78 +57,107 @@
           class="select-div text-center text-light mt-2 py-2 bg-dark rounded d-flex justify-content-around"
         >
           <div class="difficulty-select-div">
-            <span class="h3">Select Level</span>
-            <br /><br />
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD1"
-                value="1500"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD1">Easy</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD2"
-                value="1000"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD2">Normal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadioD3"
-                value="700"
-                onclick="setDifficulty()"
-              />
-              <label class="form-check-label" for="inlineRadioD3">Hard</label>
+            <span class="h3">Select Difficulty</span>
+            <!-- difficulty dropdown -->
+            <div class="dropdown w-auto mt-2">
+              <button
+                class="d-inline-flex align-items-center btn btn-dark border border-white dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div
+                  class="m-0 d-flex align-items-center justify-content-center"
+                  style="gap: 0.25rem; font-size: larger"
+                >
+                  <i class="fas fa-new"></i>
+                  <span id="dyn-difficulty"></span>
+                </div>
+              </button>
+              <ul
+                class="dropdown-menu mt-2 py-0 w-100 bg-dark border border-primary text-light"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li
+                  class="dropdown-item text-success difficulty-item"
+                  data-value="1500"
+                  data-name="easy"
+                  selected
+                  onclick="setDifficulty(this.dataset.value)"
+                >
+                  <h5 class="m-0">Easy</h5>
+                </li>
+                <li
+                  class="dropdown-item text-warning difficulty-item"
+                  data-value="1000"
+                  data-name="medium"
+                  onclick="setDifficulty(this.dataset.value)"
+                >
+                  <h5 class="m-0">Medium</h5>
+                </li>
+                <li
+                  class="dropdown-item text-danger difficulty-item"
+                  data-value="700"
+                  data-name="hard"
+                  onclick="setDifficulty(this.dataset.value)"
+                >
+                  <h5 class="m-0">Hard</h5>
+                </li>
+              </ul>
             </div>
           </div>
 
           <div class="time-select-div">
             <span class="h3">Select Time</span>
-            <br /><br />
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions2"
-                id="inlineRadioT1"
-                value="1"
-                onclick="setTime()"
-              />
-              <label class="form-check-label" for="inlineRadioT1">1 min</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions2"
-                id="inlineRadioT2"
-                value="2"
-                onclick="setTime()"
-              />
-              <label class="form-check-label" for="inlineRadioT2">2 min</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions2"
-                id="inlineRadioT3"
-                value="3"
-                onclick="setTime()"
-              />
-              <label class="form-check-label" for="inlineRadioT3">3 min</label>
+            <!-- time dropdown -->
+            <div class="dropdown w-auto mt-2">
+              <button
+                class="d-inline-flex align-items-center btn btn-dark border border-white dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div
+                  class="m-0 d-flex align-items-center justify-content-center"
+                  style="gap: 0.25rem; font-size: larger"
+                >
+                  <span id="dyn-time"></span>
+                </div>
+              </button>
+              <ul
+                class="dropdown-menu mt-2 py-0 w-100 bg-dark border border-primary text-light"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li
+                  class="dropdown-item text-danger time-item"
+                  data-value="1"
+                  data-name="1 min"
+                  selected
+                  onclick="setTime(this.dataset.value)"
+                >
+                  <h5 class="m-0">1 min</h5>
+                </li>
+                <li
+                  class="dropdown-item text-warning time-item"
+                  data-value="2"
+                  data-name="2 min"
+                  onclick="setTime(this.dataset.value)"
+                >
+                  <h5 class="m-0">2 min</h5>
+                </li>
+                <li
+                  class="dropdown-item text-success time-item"
+                  data-value="3"
+                  data-name="3 min"
+                  onclick="setTime(this.dataset.value)"
+                >
+                  <h5 class="m-0">3 min</h5>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -128,7 +165,7 @@
         <div class="play-area-container">
           <div class="live-score badge badge-dark">
             <div
-              class="w-100 d-flex justify-content-between align-items-center p-2 px-4 "
+              class="w-100 d-flex justify-content-between align-items-center p-2 px-4"
             >
               <span class="h3">
                 <span
@@ -176,7 +213,10 @@
             </div>
           </div>
 
-          <div class="rounded bg-dark my-2 border border-success" id="play-area">
+          <div
+            class="rounded bg-dark my-2 border border-success"
+            id="play-area"
+          >
             <span class="info-msg h3 text-secondary">
               <i class="fas fa-dice-d6 text-secondary" id="dice-loader"></i>
               <br /><br />
@@ -203,16 +243,25 @@
         class="w-100 rounded bg-dark text-light mt-2 p-3 d-flex flex-column align-items-center justify-content-center"
         id="score"
       >
-        <div class="w-100 text-success text-center mt-2 border border-dark rounded">
+        <div
+          class="w-100 text-success text-center mt-2 border border-dark rounded"
+        >
           <i
             class="fas fa-flag-checkered fa-lg mr-1 mt-3"
-            style="transform: rotate(-10deg) rotateY(180deg)">
+            style="transform: rotate(-10deg) rotateY(180deg)"
+          >
           </i>
           <span>Scores</span>
-          <span class="text-muted badge badge-dark py-2">Last Score: <span class="text-success" id="last-score">0</span></span>
-          <hr class="bg-secondary">
-          <div class=" d-flex align-items-center justify-content-center text-dark bg-dark py-2" style="gap: 12px;">
-            <h4 class=" m-0 text-light"> Recent Scores </h4>
+          <span class="text-muted badge badge-dark py-2"
+            >Last Score:
+            <span class="text-success" id="last-score">0</span></span
+          >
+          <hr class="bg-secondary" />
+          <div
+            class="d-flex align-items-center justify-content-center text-dark bg-dark py-2"
+            style="gap: 12px"
+          >
+            <h4 class="m-0 text-light">Recent Scores</h4>
             <div class="text-center row" id="prev-scores">0</div>
           </div>
         </div>
@@ -244,7 +293,7 @@
     <div class="modal fade" id="scoreModal" role="dialog">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <!-- Modal content-->
-        <div class="modal-content  bg-dark border border-success text-white">
+        <div class="modal-content bg-dark border border-success text-white">
           <div class="modal-header">
             <h4 class="modal-title text-success">
               <i class="fas fa-medal"></i>&nbsp;Your score

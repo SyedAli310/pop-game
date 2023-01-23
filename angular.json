@@ -25,7 +25,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "PopGame/favicon.ico",
-              "PopGame/assets"
+              "PopGame/assets",
+              "PopGame/_redirects"
             ],
             "styles": [
               "PopGame/styles.scss"

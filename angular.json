@@ -28,7 +28,7 @@
               "PopGame/assets"
             ],
             "styles": [
-              "PopGame/styles.css"
+              "PopGame/styles.scss"
             ],
             "scripts": []
           },
@@ -95,7 +95,7 @@
               "PopGame/assets"
             ],
             "styles": [
-              "PopGame/styles.css"
+              "PopGame/styles.scss"
             ],
             "scripts": []
           }

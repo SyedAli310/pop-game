@@ -29,7 +29,8 @@
               "PopGame/_redirects"
             ],
             "styles": [
-              "PopGame/styles.scss"
+              "PopGame/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           },
